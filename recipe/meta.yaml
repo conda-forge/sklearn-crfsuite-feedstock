@@ -1,12 +1,13 @@
 {% set name = "sklearn-crfsuite" %}
 {% set version = "0.5.0" %}
+{% set python_min = "3.8" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz"
+  url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz"
   sha256: 136cb941ff5f7ce62a2c378988d1123ac1037241e73999ae404509a2135078e9
 
 build:
@@ -16,17 +17,19 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python-crfsuite >=0.9.7
     - scikit-learn >=0.24.0
     - tabulate >=0.4.2
     - tqdm >=2.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - sklearn_crfsuite
 
