@@ -152,6 +152,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@althonos](https://github.com/althonos/)
 * [@mxr-conda](https://github.com/mxr-conda/)
 * [@ndmaxar](https://github.com/ndmaxar/)
 * [@oblute](https://github.com/oblute/)
