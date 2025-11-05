@@ -50,6 +50,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - althonos
     - mxr-conda
     - ndmaxar
     - oblute
